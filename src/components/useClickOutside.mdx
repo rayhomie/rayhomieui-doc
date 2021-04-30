@@ -1,0 +1,40 @@
+---
+name: useClickOutside
+---
+
+import { Playground } from "docz";
+import { useClickOutside } from "./useClickOutside.tsx";
+
+# useClickOutside
+
+## 描述
+
+```bash
+传入元素的ref，点击元素以外的部分触发hanler函数
+```
+
+## 类型
+
+```ts
+
+useClickOutside:(ref: RefObject<HTMLElement>, handler: Function) => void
+
+```
+
+## 基础用法
+
+<Playground>
+{()=>{
+  const [value,setValue]=React.useState('点击')
+  const divRef =React.useRef(null)
+  useClickOutside(divRef,()=>setValue('点击了div的外部'))
+  return  (
+    <div
+    ref={divRef} 
+    onClick={()=>setValue('点击了div的内部')}
+    style={{ width: 160, height: 30, background:"#0d6efd" }} 
+  >
+  {value}
+  </div>)
+}}
+</Playground>

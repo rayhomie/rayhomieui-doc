@@ -1,0 +1,40 @@
+---
+name: useDebounce
+---
+
+import { Playground } from "docz";
+import { useDebounce } from "./useDebounce.tsx";
+
+# useDebounce
+
+## 描述
+
+```bash
+传入需要防抖的任意值和防抖的间隔时间n，推迟 n 毫秒后，获得返回的值。
+当value变化时触发防抖。
+```
+
+## 类型
+
+```ts
+
+useDebounce:(value: any, delay:number) => value
+传入value，返回value；默认delay为300，单位ms
+
+```
+
+## 基础用法
+
+<Playground>
+{()=>{
+  const [value,setValue]=React.useState(0)
+  const debounceValue = useDebounce(value,1000)
+  return  (
+    <div
+    onClick={()=>setValue(Math.random())}
+    style={{ width: 200, height: 30, background:"#0d6efd"}} 
+  >
+  {debounceValue}
+  </div>)
+}}
+</Playground>
