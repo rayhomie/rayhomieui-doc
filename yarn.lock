@@ -11600,10 +11600,10 @@ raw-loader@^0.5.1:
   resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-0.5.1.tgz"
   integrity sha1-DD0L6u2KAclm2Xh793goElKpeao=
 
-rayhomieui@0.1.11:
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/rayhomieui/-/rayhomieui-0.1.11.tgz#2b3857e48f344106e97f2f3f1fa1b97a8cf17350"
-  integrity sha512-K3x0kARczfwX38o+MW1AllbHe9K1GhYOtm2Q6F0S6mZqNz9UTD9CgCZebi+LSJ+JGhdfLIn6MQ42Tz1KP0iYBA==
+rayhomieui@0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/rayhomieui/-/rayhomieui-0.1.12.tgz#585f805b8b98bc82a846cf935651a2c2769f7ce5"
+  integrity sha512-0cEDGNbINzc2i7Z1sa5IT5zXfJ/az41fd+Ugm8QwFdX7z2AJFwWlmRHtMNK5k3cjEDcSY9EcosV3uArsPjF6Pw==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.32"
     "@fortawesome/free-solid-svg-icons" "^5.15.1"
@@ -11641,9 +11641,9 @@ react-ace@^7.0.2:
     prop-types "^15.7.2"
 
 react-dev-utils@^4.2.3:
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.3.tgz#5b42d9ea58d5e9e017a2f57a40a8af408a3a46fb"
-  integrity sha512-uvmkwl5uMexCmC0GUv1XGQP0YjfYePJufGg4YYiukhqk2vN1tQxwWJIBERqhOmSi80cppZg8mZnPP/kOMf1sUQ==
+  version "4.2.2"
+  resolved "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-4.2.2.tgz"
+  integrity sha512-HwN0EE+9DS7wB0kKy6Bc5kUTUGUAOyZorJeb+ZGeTrxd1ZNwEJn1TfCRuNpRRa+Iu3VeYBcQ2pjuordJ4eqmfA==
   dependencies:
     address "1.0.3"
     babel-code-frame "6.26.0"
