@@ -11600,10 +11600,10 @@ raw-loader@^0.5.1:
   resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-0.5.1.tgz"
   integrity sha1-DD0L6u2KAclm2Xh793goElKpeao=
 
-rayhomieui@0.1.8:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/rayhomieui/-/rayhomieui-0.1.8.tgz#d1c64d489d8eb2f08ff2add88157dd6bda75812f"
-  integrity sha512-YZfJiOJxps26KEFJrraH3uycdy7dKBFzR6Rbo7IdZymfxfb2orAF/fEmp/l7q8QN/Rlch/5NF9abYcvAJ1muMw==
+rayhomieui@0.1.11:
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/rayhomieui/-/rayhomieui-0.1.11.tgz#2b3857e48f344106e97f2f3f1fa1b97a8cf17350"
+  integrity sha512-K3x0kARczfwX38o+MW1AllbHe9K1GhYOtm2Q6F0S6mZqNz9UTD9CgCZebi+LSJ+JGhdfLIn6MQ42Tz1KP0iYBA==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.32"
     "@fortawesome/free-solid-svg-icons" "^5.15.1"
