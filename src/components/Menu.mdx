@@ -1,0 +1,50 @@
+---
+name: Menu
+---
+
+import { Playground, Props } from "docz";
+import { Menu,MenuItem,SubMenu } from "./Menu.tsx";
+
+# Menu
+
+## Menu属性
+
+###### Menu包裹的子元素只能是 Menu.Item（不可再展开） 或 Menu.SubMenu（可再展开）
+
+<Props of={Menu} />
+
+## Menu.Item属性
+
+<Props of={MenuItem} />
+
+## Menu.SubMenu属性
+
+<Props of={SubMenu} />
+
+## 水平方向（默认）
+
+<Playground>
+        <Menu defaultIndex={"0"} onSelect={(i) => alert(i)}>
+          <Menu.Item>cool link1</Menu.Item>
+          <Menu.Item>cool link2</Menu.Item>
+          <Menu.SubMenu title="cool link3">
+            <Menu.Item>cool link3.1</Menu.Item>
+          </Menu.SubMenu>
+          <Menu.Item disabled>cool link4</Menu.Item>
+        </Menu>
+</Playground>
+
+
+## 竖直方向
+
+<Playground>
+  <Menu defaultIndex={"1"} onSelect={(i) => alert(i)} mode="vertical">
+          <Menu.Item>cool link1</Menu.Item>
+          <Menu.Item>cool link2</Menu.Item>
+          <Menu.SubMenu title="cool link3">
+            <Menu.Item>cool link3.1</Menu.Item>
+          </Menu.SubMenu>
+          <Menu.Item disabled>cool link4</Menu.Item>
+          <li>1111</li>
+        </Menu>
+</Playground>

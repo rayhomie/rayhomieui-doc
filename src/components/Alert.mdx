@@ -1,0 +1,42 @@
+---
+name: Alert
+---
+
+import { Playground, Props } from "docz";
+import { Alert } from "./Alert.tsx";
+import { Button } from "./Button.tsx";
+
+# Alert
+
+## 属性
+
+<Props of={Alert} />
+
+## 基础用法
+
+<Playground>
+  {() => {
+    const [visible, setVisible] = React.useState(false);
+    return (
+    <>
+       <Button onClick={()=>setVisible(pre=>!pre)} style={{marginBottom:20}}>
+        打开Alert
+       </Button> 
+       <Alert title="closeable:true" description='默认' visible={visible} onClose={()=>setVisible(false)} />
+       <Alert title="closeable:false" visible={visible} closeable={false} onClose={()=>setVisible(false)} />
+     </>
+  )
+  }}
+</Playground>
+
+
+## 类型
+
+<Playground>
+  <Alert title="default" visible={true} alertType="default" description='默认' />
+  <Alert title="success" visible={true} alertType="success" description='成功' />
+  <Alert title="danger" visible={true} alertType="danger" description='危险' />
+  <Alert title="warning" visible={true} alertType="warning" description='警告' />
+</Playground>
+
+

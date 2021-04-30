@@ -1,0 +1,43 @@
+---
+name: Button
+---
+
+import { Playground, Props } from "docz";
+import { Button } from "./Button.tsx";
+
+# Button
+
+## 属性
+
+#### 可透传所有原生的 button 属性
+
+<Props of={Button} />
+
+## 基础用法
+
+<Playground>
+  <Button onClick={()=>alert('点击')} >Click me</Button>
+</Playground>
+
+## 类型
+
+<Playground>
+  <Button btnType="primary" style={{marginRight:20}} >Click me</Button>
+  <Button btnType="default" style={{marginRight:20}}>Click me</Button>
+  <Button btnType="danger" style={{marginRight:20}}>Click me</Button>
+  <Button btnType="link">Click me</Button>
+</Playground>
+
+## 尺寸
+
+<Playground>
+  <Button btnType="primary" size="lg" style={{marginRight:20}}>
+    Click me
+  </Button>
+   <Button btnType="primary" style={{marginRight:20}}>
+    Click me
+  </Button>
+  <Button size="sm">
+    Click me
+  </Button>
+</Playground>

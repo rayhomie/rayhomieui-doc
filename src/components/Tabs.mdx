@@ -1,0 +1,59 @@
+---
+name: Tabs
+---
+
+import { Playground, Props } from "docz";
+import { Tabs ,TabsItem } from "./Tabs.tsx";
+
+# Tabs
+
+## Tabs属性
+
+###### Tabs包裹的子元素只能是 Tabs.Item 标签
+
+<Props of={Tabs} />
+
+## Tabs.Item属性
+
+<Props of={TabsItem} />
+
+## line
+
+<Playground> 
+  <Tabs
+          onSelect={(i) => {
+            alert(i);
+          }}
+        >
+          <Tabs.Item labal="card1">this is card1</Tabs.Item>
+          <Tabs.Item labal="card2">this is card2</Tabs.Item>
+          <Tabs.Item labal="card3" disabled>
+            this is card3
+          </Tabs.Item>
+          <Tabs.Item labal="card4">
+            <h2>this is card4 title</h2>
+          </Tabs.Item>
+        </Tabs>
+</Playground>
+
+## card
+
+<Playground> 
+      <Tabs
+          onSelect={(i) => {
+            alert(i);
+          }}
+          defaultIndex={1}
+          type="card"
+        >
+          <Tabs.Item labal="card1">this is card1</Tabs.Item>
+          <Tabs.Item labal="card2">this is card2</Tabs.Item>
+          <Tabs.Item labal="card3" disabled>
+            this is card3
+          </Tabs.Item>
+          <Tabs.Item labal="card4">
+            <h2>this is card4 title</h2>
+            <main>this is card4</main>
+          </Tabs.Item>
+        </Tabs>
+</Playground>

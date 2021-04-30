@@ -1,0 +1,49 @@
+---
+name: Transition
+---
+
+import { Playground, Props } from "docz";
+import { Transition } from "./Transition.tsx";
+import { Button } from "./Button.tsx";
+
+# Transition
+
+#### 可透传所有 CSSTransition 属性
+
+## 属性
+
+<Props of={Transition} />
+
+## 基础用法
+
+<Playground>
+  {() => {
+    const [open,setOpen]=React.useState(true)
+    return (
+      <>
+      <Button onClick={()=>setOpen(pre=>!pre)}>开关</Button>
+      <Transition
+       in={open} 
+       animation="zoom-in-top"
+       timeout={500}
+       >
+        <div style={{ width: 100, height: 40, background: "#dc3545" }} />
+      </Transition> 
+       <Transition
+       in={open} 
+       animation="zoom-in-left"
+       timeout={500}
+       >
+        <div style={{ width: 100, height: 40, background: "#0d6efd" }} />
+      </Transition>
+        <Transition
+       in={open} 
+       animation="zoom-in-bottom"
+       timeout={500}
+       >
+        <div style={{ width: 100, height: 40, background: "#52c41a" }} />
+      </Transition>
+      </>
+    );
+  }}
+</Playground>

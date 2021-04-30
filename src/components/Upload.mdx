@@ -1,0 +1,43 @@
+---
+name: Upload
+---
+
+import { Playground, Props } from "docz";
+import { Upload, UploadList } from "./Upload.tsx";
+
+# Upload
+
+## Upload 属性
+
+```js
+type UploadFileStatus = "ready" | "uploading" | "success" | "error";
+interface UploadFile {
+  uid: string;
+  size: number;
+  name: string;
+  status?: UploadFileStatus;
+  percent?: number;
+  raw?: UploadFile;
+  response?: any;
+  error?: any;
+}
+```
+
+<Props of={Upload} />
+
+## 基础用法
+
+<Playground>
+  <Upload
+    action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+    onProgress={(e, f) => {
+      console.log(e, f);
+    }}
+    onSuccess={(e, f) => {
+      console.log(e, f);
+    }}
+    onError={(e, f) => {
+      console.log(e, f);
+    }}
+  />
+</Playground>

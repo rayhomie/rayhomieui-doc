@@ -1,0 +1,71 @@
+---
+name: AutoComplete
+---
+
+import { Playground, Props } from "docz";
+import { AutoComplete } from "./AutoComplete.tsx";
+
+# AutoComplete
+
+## 属性
+
+#### 可透传 Input 的所有属性，除 onSelect
+
+<Props of={AutoComplete} />
+
+## 基础用法
+
+<Playground>
+  {() => {
+    const lakers = [
+      "cook",
+      "AD",
+      "james",
+      "green",
+      "howard",
+      "kuzma",
+      "McGee",
+      "rando",
+      "bradley",
+      "pope",
+      "caruso",
+    ];
+    return (
+      <AutoComplete
+        fetchSuggestions={(query) =>
+          lakers.filter((name) => name.includes(query.toLowerCase()))
+        }
+        value="jame"
+        onSelect={(item) => alert(item)}
+      />
+    );
+  }}
+</Playground>
+
+## renderOption
+
+<Playground>
+  {() => {
+    const lakers = [
+      "cook",
+      "AD",
+      "james",
+      "green",
+      "howard",
+      "kuzma",
+      "McGee",
+      "rando",
+      "bradley",
+      "pope",
+      "caruso",
+    ];
+    return (
+      <AutoComplete
+        fetchSuggestions={(query) =>
+          lakers.filter((name) => name.includes(query.toLowerCase()))
+        }
+        renderOption={(item) => <div style={{background:'#f0f0f0'}}>item</div>}
+      />
+    );
+  }}
+</Playground>

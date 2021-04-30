@@ -1,0 +1,41 @@
+---
+name: Progress
+---
+
+import { Playground, Props } from "docz";
+import { Progress } from "./Progress.tsx";
+
+# Progress
+
+## 属性
+
+<Props of={Progress} />
+
+## 基础用法
+
+<Playground>
+  <Progress percent={10} />
+</Playground>
+
+## 设置高度
+
+<Playground>
+  <Progress percent={20} strokeHeight={30} />
+</Playground>
+
+## 显示进度
+
+<Playground>
+  <Progress percent={30} showText={false} />
+</Playground>
+
+## 设置主题
+
+<Playground>
+  <Progress percent={40} />
+  <Progress percent={50} theme="secondary" style={{ marginTop: 10 }} />
+  <Progress percent={60} theme="success" style={{ marginTop: 10 }} />
+  <Progress percent={70} theme="info" style={{ marginTop: 10 }} />
+  <Progress percent={80} theme="warning" style={{ marginTop: 10 }} />
+  <Progress percent={90} theme="danger" style={{ marginTop: 10 }} />
+</Playground>

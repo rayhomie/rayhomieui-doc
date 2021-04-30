@@ -1,0 +1,50 @@
+---
+name: Icon
+---
+
+import { Playground, Props } from "docz";
+import { Icon } from "./Icon.tsx";
+import { Button } from "./Button.tsx";
+
+# Icon
+
+## 属性
+
+#### 可透传 FontAwesomeIcon 库的所有属性
+
+<Props of={Icon} />
+
+## 基础用法
+
+<Playground>
+{()=>{
+  return <>
+  <Icon icon="spinner" size="6x" rotation={180} theme="success" />
+    <Button 
+  onClick={()=>
+  window.open('https://fontawesome.com/how-to-use/on-the-web/using-with/react')}
+  >
+  点我查看FontAwesomeIcon库属性
+  </Button> 
+   </>
+}}
+</Playground>
+
+## 主题
+
+<Playground>
+  {/*支持fontawesome的所有属性https://fontawesome.com/how-to-use/on-the-web/using-with/react  */}
+  <Icon icon="arrow-down" size="6x" rotation={0} theme="primary" spin />
+  <Icon icon="arrow-down" size="6x" rotation={30} theme="secondary" pulse />
+  <Icon icon="arrow-down" size="6x" rotation={180} theme="success" />
+  <Icon icon="arrow-down" size="6x" rotation={270} theme="info" inverse />
+  <Icon icon="arrow-down" size="6x" rotation={360} theme="warning" fixedWidth />
+  <Icon
+    icon="arrow-down"
+    size="6x"
+    rotation={90}
+    theme="danger"
+    border
+    style={{transform:'translate(20px,10px)'}}
+  />
+</Playground>

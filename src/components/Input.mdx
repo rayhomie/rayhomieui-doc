@@ -1,0 +1,60 @@
+---
+name: Input
+---
+
+import { Playground, Props } from "docz";
+import { Input } from "./Input.tsx";
+
+# Input
+
+## 属性
+
+#### 可透传原生 input 所有属性（除 size）
+
+<Props of={Input} />
+
+## 基础用法
+
+<Playground>
+  {() => {
+    const [value, setValue] = React.useState("");
+    return (
+      <Input
+        placeholder="请输入些什么..."
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+        style={{ width: "240px" }}
+      />
+    );
+  }}
+</Playground>
+
+## 前缀后缀
+
+<Playground>
+  <Input prepend="账号：" />
+  <Input append="完成" />
+  <Input prepend="www." append=".com" />
+</Playground>
+
+## 图标
+
+<Playground>
+  <Input icon="spinner" />
+</Playground>
+
+## 尺寸
+
+<Playground>
+  <Input prepend="不设置size" />
+  <Input prepend="size='sm'" size="sm" />
+  <Input prepend="size='lg'" size="lg" />
+</Playground>
+
+## 禁用
+
+<Playground>
+  <Input prepend="禁用" disabled />
+</Playground>

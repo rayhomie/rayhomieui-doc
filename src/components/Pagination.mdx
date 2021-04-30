@@ -1,0 +1,79 @@
+---
+name: Pagination
+---
+
+import { Playground, Props } from "docz";
+import { Pagination } from "./Pagination.tsx";
+
+# Pagination
+
+## 属性
+
+<Props of={Pagination} />
+
+## 基础用法
+
+<Playground>
+  {() => {
+    const MOCK_DATA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const PAGE_SIZE = 1;
+    const searchPage = React.useCallback(
+      (current, pageSize, sourceData) =>
+        sourceData.slice(pageSize * (current - 1), pageSize * current),
+      []
+    );
+    const [data, setData] = React.useState([]);
+    React.useEffect(() => {
+      const init = searchPage(1, PAGE_SIZE, MOCK_DATA);
+      setData(init);
+    }, []);
+    return (
+      <div>
+        {/*外部受控分页*/}
+        <Pagination
+          total={MOCK_DATA.length}
+          pageSize={PAGE_SIZE}
+          className="hhh"
+          showQuickJumper
+          onChange={(p) => {
+            setData(searchPage(p, PAGE_SIZE, MOCK_DATA));
+          }}
+        />
+        <div>{data.map((i) => i)}</div>
+      </div>
+    );
+  }}
+</Playground>
+
+## 默认
+
+<Playground>
+  <Pagination
+    total={500}
+    pageSize={10}
+    className="hhh"
+    onChange={(p) => {
+      console.log(p);
+    }}
+  />
+</Playground>
+
+## 快速跳转
+
+<Playground>
+  <Pagination
+    total={4}
+    pageSize={1}
+    className="hhh"
+    showQuickJumper
+    onChange={(p) => {
+      console.log(p);
+    }}
+  />
+</Playground>
+
+## 禁用
+
+<Playground>
+  <Pagination total={500} pageSize={10} disabled className="hhh" />
+</Playground>
